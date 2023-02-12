@@ -1,8 +1,8 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-class HashtagModel {
+class HashTagModel {
   String title;
 
-  HashtagModel({
+  HashTagModel({
     required this.title,
   });
 }

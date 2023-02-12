@@ -25,29 +25,46 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'dana',
         textTheme: const TextTheme(
-          titleLarge: TextStyle(
+          headlineLarge: TextStyle(
             fontFamily: 'dana',
             fontSize: 16,
             fontWeight: FontWeight.w700,
             color: SolidColors.posterTitle,
           ),
-          titleMedium: TextStyle(
+          headlineMedium: TextStyle(
             fontFamily: 'dana',
             fontSize: 14,
+            color: SolidColors.seeMore,
             fontWeight: FontWeight.w700,
-            color: Colors.white,
           ),
-          titleSmall: TextStyle(
+          headlineSmall: TextStyle(
+            fontFamily: 'dana',
+            fontSize: 14,
+            color: Colors.white,
+            fontWeight: FontWeight.w300,
+          ),
+          bodyLarge: TextStyle(
+            fontFamily: 'dana',
+            fontSize: 14,
+            color: Color.fromARGB(255, 70, 70, 70),
+            fontWeight: FontWeight.w700,
+          ),
+          labelMedium: TextStyle(
+            fontFamily: 'dana',
+            fontSize: 14,
+            color: SolidColors.hintText,
+            fontWeight: FontWeight.w700,
+          ),
+          labelLarge: TextStyle(
             fontFamily: 'dana',
             fontSize: 14,
             fontWeight: FontWeight.w300,
-            color: Colors.white,
+            color: SolidColors.posterSubTitle,
           ),
-          bodyMedium: TextStyle(
+          bodySmall: TextStyle(
             fontFamily: 'dana',
             fontSize: 13,
             fontWeight: FontWeight.w300,
-            color: Colors.white,
           ),
         ),
       ),
