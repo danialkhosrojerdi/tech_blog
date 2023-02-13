@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:tech_blog/Screens/splash_screen.dart';
+import 'package:tech_blog/view/splash_screen.dart';
 import 'package:tech_blog/constants/color.dart';
 
 void main() {

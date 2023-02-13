@@ -44,29 +44,26 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: Stack(
         children: [
-          Padding(
-            padding: const EdgeInsets.only(bottom: 70),
-            child: SingleChildScrollView(
-              child: SafeArea(
-                child: Column(
-                  children: [
-                    const SizedBox(
-                      height: 14,
-                    ),
-                    _getHomePagePoster(size, textTheme),
-                    _getTags(size, textTheme, bodyMargin),
-                    _getSectionTitle(bodyMargin, textTheme, 'آخرین نوشته ها',
-                        Assets.icons.bluePen.path),
-                    _getRecentArticles(size, bodyMargin, textTheme),
-                    _getSectionTitle(bodyMargin, textTheme, 'آخرین پادکست ها',
-                        Assets.icons.microphon.path),
-                    _getRecentPodcasts(size, bodyMargin, textTheme)
-                  ],
-                ),
+          SingleChildScrollView(
+            child: SafeArea(
+              child: Column(
+                children: [
+                  const SizedBox(
+                    height: 14,
+                  ),
+                  _getHomePagePoster(size, textTheme),
+                  _getTags(size, textTheme, bodyMargin),
+                  _getSectionTitle(bodyMargin, textTheme, 'آخرین نوشته ها',
+                      Assets.icons.bluePen.path),
+                  _getRecentArticles(size, bodyMargin, textTheme),
+                  _getSectionTitle(bodyMargin, textTheme, 'آخرین پادکست ها',
+                      Assets.icons.microphon.path),
+                  _getRecentPodcasts(size, bodyMargin, textTheme)
+                ],
               ),
             ),
           ),
-          _getBottomNavigation(size),
+          _getBottomNavigation(size)
         ],
       ),
     );
@@ -175,12 +172,11 @@ class _HomeScreenState extends State<HomeScreen> {
                       height: size.height / 5,
                       width: size.width / 2.5,
                       decoration: BoxDecoration(
-                        color: Colors.grey,
                         borderRadius: BorderRadius.circular(20),
-                        // image: DecorationImage(
-                        //   image: NetworkImage(blogList[index].imageUrl),
-                        //   fit: BoxFit.cover,
-                        // ),
+                        image: DecorationImage(
+                          image: NetworkImage(blogList[index].imageUrl),
+                          fit: BoxFit.cover,
+                        ),
                       ),
                       foregroundDecoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
@@ -234,7 +230,7 @@ class _HomeScreenState extends State<HomeScreen> {
   SizedBox _getRecentPodcasts(
       Size size, double bodyMargin, TextTheme textTheme) {
     return SizedBox(
-      height: size.height / 3.5,
+      height: size.height / 2.5,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: blogList.length,
@@ -247,12 +243,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   height: size.height / 5,
                   width: size.width / 2.5,
                   decoration: BoxDecoration(
-                    color: Colors.grey,
                     borderRadius: BorderRadius.circular(20),
-                    // image: DecorationImage(
-                    //   image: NetworkImage(blogList[index].imageUrl),
-                    //   fit: BoxFit.cover,
-                    // ),
+                    image: DecorationImage(
+                      image: NetworkImage(blogList[index].imageUrl),
+                      fit: BoxFit.cover,
+                    ),
                   ),
                   foregroundDecoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
